@@ -10,11 +10,11 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as file:
 
 
 setup(
-    name='leo.core.database',
+    name='leo.core',
     version="0.1.0",
     description="Leo Core Database module",
     long_description=long_description,
-    url="https://github.com/Rocklviv/leo-core-database",
+    url="https://github.com/Rocklviv/Leo-Core-Database",
     author="Denys Chekirda aka Rocklviv",
     author_email="dchekirda@gmail.com",
     license="GPLv3",
