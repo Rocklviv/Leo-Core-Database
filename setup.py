@@ -42,5 +42,6 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     keywords='rethinkdb database orm db',
-    install_requires=['rethinkdb']
+    install_requires=['rethinkdb'],
+    packages=['leo']
 )
