@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as file:
 
 
 setup(
-    name='leo.core',
+    name='Leo-Core-Database',
     version="0.1.0",
     description="Leo Core Database module",
     long_description=long_description,
