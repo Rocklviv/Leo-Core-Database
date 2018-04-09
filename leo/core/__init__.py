@@ -143,7 +143,7 @@ class Database(object):
 
     def create_table(self, table):
         try:
-            result = r.db(self.dbname).table_create(table)
+            result = r.db(self.dbname).table_create(table).run()
             if result:
                 return True
         except ReqlOpFailedError as e:
