@@ -153,3 +153,10 @@ class Database(object):
                 return document
         else:
             return int(0)
+
+    def table_list(self):
+        """
+
+        :return:
+        """
+        return r.db(self.dbname).table_list()
