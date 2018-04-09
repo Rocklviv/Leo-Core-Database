@@ -141,6 +141,14 @@ class Database(object):
     def insert_or_update(self, *args, **kwargs):
         pass
 
+    def create_table(self, table):
+        try:
+            result = r.db(self.dbname).table_create(table)
+            if result:
+                return True
+        except ReqlOpFailedError as e:
+            self.log.exception("Exception: cannot create table in database. ERROR: {}".format(e))
+
     def getField(self, *args, **kwargs):
         table = None
         data = []
@@ -159,4 +167,4 @@ class Database(object):
 
         :return:
         """
-        return r.db(self.dbname).table_list()
+        return r.db(self.dbname).table_list().run()
