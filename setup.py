@@ -11,7 +11,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as file:
 
 setup(
     name='Leo-Core-Database',
-    version="0.1.0",
+    version="0.1.2",
     description="Leo Core Database module",
     long_description=long_description,
     url="https://github.com/Rocklviv/Leo-Core-Database",
@@ -23,7 +23,7 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 3 - Beta',
 
         # Indicate who your project is intended for
         'Intended Audience :: Developers',

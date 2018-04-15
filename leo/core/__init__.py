@@ -46,9 +46,9 @@ class Database(object):
 
     def select(self, *args, **kwargs):
         """
-
-        :param args:
-        :param kwargs:
+        Performs select from database by filters or by ID.
+        :param args: Args contain table name.
+        :param kwargs: Object with query that should be provided for select.
         :return:
         """
         table = None
@@ -75,9 +75,9 @@ class Database(object):
 
     def insert(self, *args, **kwargs):
         """
-
-        :param args:
-        :param kwargs:
+        Performs insert of data to database / table.
+        :param args: Args container table name.
+        :param kwargs: Object with query that should be provided for insert.
         :return:
         """
         table = None
@@ -115,7 +115,8 @@ class Database(object):
             else:
                 return False
         else:
-            return False, json.dumps({'status': 11, 'message': 'Cannot update document without a query.'})
+            return False, json.dumps({'status': 11,
+                                      'message': 'Cannot update document without a query.'})
 
     def delete(self, *args, **kwargs):
         """
@@ -136,12 +137,18 @@ class Database(object):
             else:
                 return False
         else:
-            return False, json.dumps({'status': 12, 'message': 'Cannot delete document without query.'})
+            return False, json.dumps({'status': 12,
+                                      'message': 'Cannot delete document without query.'})
 
     def insert_or_update(self, *args, **kwargs):
         pass
 
     def create_table(self, table):
+        """
+
+        :param table:
+        :return:
+        """
         try:
             result = r.db(self.dbname).table_create(table).run()
             if result:
@@ -150,6 +157,12 @@ class Database(object):
             self.log.exception("Exception: cannot create table in database. ERROR: {}".format(e))
 
     def getField(self, *args, **kwargs):
+        """
+        Returns data selected by specific field in table.
+        :param args: Args container table name.
+        :param kwargs: Object with query that should be provided for search.
+        :return: string
+        """
         table = None
         data = []
         if args:
@@ -164,7 +177,7 @@ class Database(object):
 
     def table_list(self):
         """
-
+        Returns all available tables in database.
         :return:
         """
         return r.db(self.dbname).table_list().run()
