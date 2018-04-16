@@ -11,7 +11,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as file:
 
 setup(
     name='Leo-Core-Database',
-    version="0.1.2",
+    version="0.2.1",
     description="Leo Core Database module",
     long_description=long_description,
     url="https://github.com/Rocklviv/Leo-Core-Database",
@@ -43,5 +43,5 @@ setup(
     ],
     keywords='rethinkdb database orm db',
     install_requires=['rethinkdb'],
-    packages=['leo.core']
+    packages=['leo.core.database']
 )
