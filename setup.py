@@ -43,5 +43,5 @@ setup(
     ],
     keywords='rethinkdb database orm db',
     install_requires=['rethinkdb'],
-    packages=['leo.core.database']
+    packages=['leo.core']
 )
